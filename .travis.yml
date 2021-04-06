@@ -6,7 +6,8 @@ cache:
   directories:
     - "node_modules"
 
- script:
+script:
+  - yarn test
   - yarn build
 
 deploy:
