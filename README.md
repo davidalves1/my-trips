@@ -1,4 +1,6 @@
-# Next Boilerplate
+[![Build Status](https://travis-ci.com/davidalves1/my-trips.svg?branch=main)](https://travis-ci.com/davidalves1/my-trips)
+
+# My Trips
 
 ## Getting Started
 
@@ -14,40 +16,6 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Working with PWA
-
-To configure the app to work with PWA is necessary to add 
-[**Next PWA**](https://www.npmjs.com/package/next-pwa): 
-
-```bash
-yarn add next-pwa
-```
-
-The current version of Next PWA (5.0.6) requires Webpack 4, so to this current version of NextJS (10.0.7) 
-it's necessary to run:
-  
-```bash
-yarn add webpack@4
-```
-
-Add this code to the `next.config.js` file (if not exists it should be created in the root):
-
-```js
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const withPwa = require('next-pwa');
-const isProd = process.env.NODE_ENV === 'production';
-
-module.exports = {
-  pwa: {
-    dest: 'public',
-    disable: !isProd,
-  },
-};
-```
-
-Add [manifest.json file](https://developer.mozilla.org/pt-BR/docs/Web/Manifest) to `/public` and 
-add `<link rel="manifest" href="/manifest.json">` to `/src/pages/_app.tsx`
 
 ## Deploy on Vercel
 
