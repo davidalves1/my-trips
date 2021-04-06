@@ -7,8 +7,8 @@ cache:
     - "node_modules"
 
 script:
-  - yarn test
   - yarn build
+  - yarn export
 
 deploy:
   provider: s3
@@ -17,6 +17,6 @@ deploy:
   bucket: my-trips
   region: sa-east-1
   skip_cleanup: true
-  local_dir: .next
+  local_dir: out
   on:
     branch: main
