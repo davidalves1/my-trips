@@ -19,7 +19,7 @@
     ]
   },
   "dependencies": {
-    "@styled-icons/bootstrap": "^10.29.0",
+    "@styled-icons/evaicons-solid": "^10.18.0",
     "leaflet": "^1.7.1",
     "next": "10.0.8",
     "react": "17.0.1",

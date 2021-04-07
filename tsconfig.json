@@ -4,7 +4,8 @@
     "paths": {
       "@styles/*": ["styles/*"],
       "@pages/*": ["pages/*"],
-      "@components/*": ["components/*"]
+      "@components/*": ["components/*"],
+      "@templates/*": ["templates/*"]
     },
     "target": "es5",
     "lib": [
