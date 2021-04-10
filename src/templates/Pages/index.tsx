@@ -3,7 +3,7 @@ import { Close } from '@styled-icons/evaicons-solid/Close';
 
 import * as S from './styles';
 
-const AboutTemplate = () => (
+const PagesTemplate = () => (
   <S.Content>
     <LinkWrapper href="/">
       <Close size={32} />
@@ -21,4 +21,4 @@ const AboutTemplate = () => (
   </S.Content>
 );
 
-export default AboutTemplate;
+export default PagesTemplate;
