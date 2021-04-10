@@ -1,6 +1,6 @@
 import { GraphQLClient } from 'graphql-request';
 
-const endpoint = process.env.GRAPHCMS_URL;
+const endpoint = process.env.GRAPHCMS_URL || '';
 
 const client = new GraphQLClient(endpoint, {
   headers: {

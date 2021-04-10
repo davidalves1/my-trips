@@ -5,7 +5,8 @@
       "@styles/*": ["styles/*"],
       "@pages/*": ["pages/*"],
       "@components/*": ["components/*"],
-      "@templates/*": ["templates/*"]
+      "@templates/*": ["templates/*"],
+      "@graphql/*": ["graphql/*"]
     },
     "target": "es5",
     "lib": [
