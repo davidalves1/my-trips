@@ -1,4 +1,5 @@
 language: node_js
+
 node_js:
   - 14
 
@@ -7,16 +8,17 @@ cache:
     - "node_modules"
 
 script:
-  - yarn build
-  - yarn export
+  - yarn lint
+  # - yarn build
+  # - yarn export
 
-deploy:
-  provider: s3
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
-  bucket: my-trips
-  region: sa-east-1
-  skip_cleanup: true
-  local_dir: out
-  on:
-    branch: main
+# deploy:
+#   provider: s3
+#   access_key_id: $AWS_ACCESS_KEY
+#   secret_access_key: $AWS_SECRET_KEY
+#   bucket: my-trips
+#   region: sa-east-1
+#   skip_cleanup: true
+#   local_dir: out
+#   on:
+#     branch: main
