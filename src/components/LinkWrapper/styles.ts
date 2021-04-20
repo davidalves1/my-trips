@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   top: var(--medium);
   right: var(--medium);
   z-index: 1100;
-  color: var(--white);
+  color: var(--highlight);
   cursor: pointer;
 
   svg {
@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
 
   &:hover {
     svg {
-      color: var(--highlight);
+      color: var(--secondary);
     }
   }
 `;

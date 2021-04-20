@@ -3,22 +3,23 @@ import { Close } from '@styled-icons/evaicons-solid/Close';
 
 import * as S from './styles';
 
-const PagesTemplate = () => (
+export type PageTemplateProps = {
+  heading: string;
+  body: string;
+};
+
+const PageTemplate = ({ heading, body }: PageTemplateProps) => (
   <S.Content>
     <LinkWrapper href="/">
       <Close size={32} />
     </LinkWrapper>
 
-    <S.Title>My Trips</S.Title>
+    <S.Title>{heading}</S.Title>
 
     <S.Body>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique. Id venenatis a
-        condimentum vitae sapien pellentesque habitant morbi tristique.
-      </p>
+      <div dangerouslySetInnerHTML={{ __html: body }} />
     </S.Body>
   </S.Content>
 );
 
-export default PagesTemplate;
+export default PageTemplate;
