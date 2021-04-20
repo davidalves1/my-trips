@@ -11,7 +11,8 @@
     "test": "jest",
     "test:watch": "jest --watchAll",
     "test:cov": "jest --coverage",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "codegen": "graphql-codegen --config codegen.yml"
   },
   "lint-staged": {
     "src/**/*": [
@@ -31,6 +32,10 @@
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.13.0",
+    "@graphql-codegen/add": "^2.0.2",
+    "@graphql-codegen/cli": "1.21.4",
+    "@graphql-codegen/typescript": "1.22.0",
+    "@graphql-codegen/typescript-operations": "1.17.16",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@types/jest": "^26.0.20",
