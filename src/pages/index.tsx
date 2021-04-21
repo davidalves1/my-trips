@@ -1,5 +1,6 @@
 import client from '@graphql/client';
 import { GET_PLACES } from '@graphql/queries';
+import { GetPlacesQuery } from '@graphql/generated/graphql';
 import { MapProps } from '@components/Map';
 import HomeTemplate from '@templates/Home';
 
@@ -8,7 +9,7 @@ export default function Home({ places }: MapProps) {
 }
 
 export const getStaticProps = async () => {
-  const { places } = await client.request(GET_PLACES);
+  const { places } = await client.request<GetPlacesQuery>(GET_PLACES);
 
   return { props: { places } };
 };
