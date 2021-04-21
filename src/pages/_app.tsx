@@ -8,7 +8,7 @@ function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         {/* TODO: customize this tags for your project */}
-        <title>My Awesome App - Boilerplate</title>
+        <title>Minhas Viagens</title>
         <link rel="shortcut icon" href="/favicon.ico" />
         <link
           rel="stylesheet"
