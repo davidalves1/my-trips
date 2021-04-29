@@ -1,5 +1,7 @@
-import LinkWrapper from '@components/LinkWrapper';
+import Image from 'next/image';
 import { Close } from '@styled-icons/evaicons-solid/Close';
+
+import LinkWrapper from '@components/LinkWrapper';
 
 import * as S from './style';
 
@@ -13,7 +15,7 @@ export type PlacesTemplateProps = {
   place: {
     slug: string;
     name: string;
-    description: {
+    description?: {
       html: string;
     };
     gallery: ImageProps[];
@@ -31,11 +33,11 @@ export default function PlacesTemplate({ place }: PlacesTemplateProps) {
         <S.Container>
           <S.Heading>{place.name}</S.Heading>
 
-          <S.Body dangerouslySetInnerHTML={{ __html: place.description.html }} />
+          <S.Body dangerouslySetInnerHTML={{ __html: place.description?.html || '' }} />
 
           <S.Gallery>
             {place.gallery.map((photo, index) => (
-              <img key={`photo-${index}`} src={photo.url} alt={place.name} />
+              <Image key={`photo-${index}`} src={photo.url} alt={place.name} width={1000} height={600} quality={75} />
             ))}
           </S.Gallery>
         </S.Container>

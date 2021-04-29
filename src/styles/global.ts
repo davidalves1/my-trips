@@ -7,7 +7,7 @@ const GlobalStyles = createGlobalStyle`
     --background: #222831;
     --white: #eee;
 
-    --container: 100rem;
+    --container: 70rem;
 
     --small: 1.5rem;
     --medium: 3rem;
