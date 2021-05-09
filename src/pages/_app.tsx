@@ -2,6 +2,9 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import NextNprogress from 'nextjs-progressbar';
 
+import { DefaultSeo } from 'next-seo';
+import SEO from '../../next-seo.config';
+
 import GlobalStyles from '@styles/global';
 
 function App({ Component, pageProps }: AppProps) {
@@ -9,7 +12,6 @@ function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         {/* TODO: customize this tags for your project */}
-        <title>Minhas Viagens</title>
         <link rel="shortcut icon" href="/favicon.ico" />
         <link
           rel="stylesheet"
@@ -17,8 +19,8 @@ function App({ Component, pageProps }: AppProps) {
           integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
           crossOrigin=""
         />
-        <meta name="description" content="Describe your project here" />
       </Head>
+      <DefaultSeo {...SEO} />
       <GlobalStyles />
       <NextNprogress color="#00adb5" height={3} stopDelayMs={200} startPosition={0.15} />
       <Component {...pageProps} />

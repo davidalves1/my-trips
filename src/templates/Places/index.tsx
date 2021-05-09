@@ -1,3 +1,4 @@
+import { NextSeo } from 'next-seo';
 import Image from 'next/image';
 import { Close } from '@styled-icons/evaicons-solid/Close';
 
@@ -17,6 +18,7 @@ export type PlacesTemplateProps = {
     name: string;
     description?: {
       html: string;
+      text: string;
     };
     gallery: ImageProps[];
   };
@@ -25,6 +27,11 @@ export type PlacesTemplateProps = {
 export default function PlacesTemplate({ place }: PlacesTemplateProps) {
   return (
     <>
+      <NextSeo
+        title={place.name}
+        description={place.description?.text || 'Nenhuma descrição foi informada'}
+        canonical="https://my-trips.davidalves1.com"
+      />
       <LinkWrapper href="/">
         <Close size={32} />
       </LinkWrapper>
